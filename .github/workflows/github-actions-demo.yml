@@ -2,11 +2,7 @@
 name: POC katalon
 on:
   workflow_dispatch:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+
 jobs:
   build:
     runs-on: windows-latest
@@ -18,4 +14,4 @@ jobs:
         with:
           version: '8.6.8'
           projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -statusDelay=15 -testSuitePath="Test Suites/LS4/LSX4_Deployment_Smoke" -browserType="Chrome" -executionProfile="default" -apiKey="694f1d60-c2fa-438f-a734-2cd8eb1e7cf1"  -orgID="144578" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
+          args: '-noSplash -retry=0 -statusDelay=15 -testSuitePath="Test Suites/POCcollection" -browserType="Chrome" -executionProfile="default" -apiKey="694f1d60-c2fa-438f-a734-2cd8eb1e7cf1"  -orgID="144578" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
