@@ -17,11 +17,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser(GlobalVariable.urls)
-
-WebUI.delay(4)
-
-
-WebUI.click(findTestObject('Object Repository/continue_button'))
-WebUI.delay(4)
-WebUI.closeBrowser()
+WebUI.openBrowser("")
+WebUI.navigateToUrl('https://master-qy2.cba.qa.alight.com/safe/version.jsp')
